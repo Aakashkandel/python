@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Include Tailwind CSS via CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <!-- Include your other stylesheets and scripts here -->
+</head>
+
+<body class="font-sans bg-gray-100">
+    <!-- Navigation -->
+    <div class="bg-blue-500 p-4 text-white">
+        <div class="container mx-auto flex justify-between items-center">
+            <h3 class="text-2xl font-bold">LOGO</h3>
+            <!-- Search Bar -->
+            <div class="search">
+                <input class="text-gray-800 p-2 rounded" type="search" placeholder="search here" name="search" id="live_search">
+            </div>
+            <!-- User Auth Section -->
+            <div class="flex items-center space-x-4">
+                <div class="image">
+                    <img src="" alt="User Image">
+                    <ion-icon name="person-outline"></ion-icon>
+                </div>
+                <div class="authbutton">
+                    <button class="btn btn-primary" onclick="showPopup();">Sign up</button>
+                    <a href="../login.php" class="btn btn-secondary">Login</a>
+                    <script>
+                        function showPopup() {
+                            var popup = document.getElementById("popupContainer");
+                            popup.style.display = "block";
+                        }
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="supermain-container">
+        <!-- Your existing content goes here with Tailwind CSS classes -->
+
+        <!-- For example: -->
+        <div class="container mx-auto mt-8">
+            <h2 class="text-3xl font-bold mb-4">Welcome to our second-hand product marketplace</h2>
+            <p class="mb-4">"Our second-hand marketplace offers an easy way to buy and sell quality used items, from electronics to furniture. Join our community today and save money while reducing waste."</p>
+            <div class="infobutton">
+                <a href="../login.php" class="btn btn-primary">Buy Product</a>
+                <a href="../login.php" class="btn btn-secondary">+ Listing Product</a>
+            </div>
+        </div>
+
+        <!-- ... Your other content ... -->
+
+        <!-- Recently Added Products -->
+        <div class="recentlyadd">
+            <h3 class="text-2xl font-bold">Recently Added product</h3>
+        </div>
+        <div class="main-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <!-- Your product cards go here with Tailwind CSS classes -->
+        </div>
+
+        <!-- ... Other sections ... -->
+
+    </div>
+
+    <!-- Tailwind CSS Filter Form -->
+    <div class="title2block bg-gray-100 py-8">
+        <div class="container mx-auto flex items-center justify-between">
+            <h2 class="text-3xl font-bold">What are you looking for?</h2>
+            <div class="search-filter flex items-center space-x-4">
+                <div class="filter-group">
+                    <label for="category_filter">Category:</label>
+                    <select id="category_filter" class="p-2 border rounded">
+                        <option value="">All Categories</option>
+                        <option value="Electronics">electronics</option>
+                        <option value="books">books</option>
+                        <option value="vehicle">vehicle</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="min_price">Min Price:</label>
+                    <input type="number" id="min_price" placeholder="Min Price" class="p-2 border rounded">
+                </div>
+                <div class="filter-group">
+                    <label for="max_price">Max Price:</label>
+                    <input type="number" id="max_price" placeholder="Max Price" class="p-2 border rounded">
+                </div>
+                <button class="btn btn-primary" onclick="applyFilters()">Apply Filters</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tailwind CSS Product Grid -->
+    <div class="product-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 p-8">
+        <!-- Your product cards go here with Tailwind CSS classes -->
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer bg-gray-800 text-white py-4">
+        <div class="container mx-auto">
+            <div class="flex justify-between items-center">
+                <div class="footer-col">
+                    <h4 class="text-xl font-bold">Second Handbuying and selling goods</h4>
+                </div>
+                <div class="footer-col">
+                    <h4 class="text-xl font-bold">online shop</h4>
+                    <ul>
+                        <li><a href="#">vhicles</a></li>
+                        <li><a href="#">clothing</a></li>
+                        <li><a href="#">electronics</a></li>
+                        <li><a href="#">mobiles</a></li>
+                        <li><a href="#">accessories</a></li>
+                        <li><a href="#">others</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="text-xl font-bold">follow us</h4>
+                    <div class="social-links flex space-x-4">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-4">
+                All rights reserved || Designed By: Aakash kandel
+            </div>
+        </div>
+    </footer>
+
+    <!-- Your existing scripts go here -->
+
+</body>
+
+</html>
